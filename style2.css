@@ -41,7 +41,7 @@ header{
     justify-content: space-between;
     padding: 0 30px;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.121);
+    background-color: transparent;
     backdrop-filter: blur(5px);
     box-shadow: 0 0 15px #72a1dea2;
     z-index: 999;
@@ -71,11 +71,13 @@ header ul{
 
 header ul li{
     list-style: none;
+    
 }
 
 header ul a{
     text-decoration: none;
     color: white;
+    
     font-weight: 700;
     transition: 0.3s;
     margin: 0 10px;
@@ -83,7 +85,9 @@ header ul a{
 
 header ul a:hover{
     text-shadow: 0 0 15px black;
+     color: rgb(230, 189, 25);
 }
+
 
 .box-icons{
     display: flex;
@@ -102,7 +106,8 @@ header ul a:hover{
     cursor: pointer;
     transition: 0.5s;
     color:white;
-     background-color:rgb(72, 72, 128);
+      background: linear-gradient(45deg, purple, darkblue);
+     /* background-color:rgb(72, 72, 128); */
 }
 
 .box-icons a:hover{
@@ -140,15 +145,15 @@ header ul a:hover{
     left: 5%;
 }
 
-.hero-info .hero-info-title{
-    color: #72a1de;
-    padding: 8px 5px;
-    border-radius: 50px;
-    border: 1px solid #72a1de94;
-    width: 240px;
-    background-color: #2200493d;
-    box-shadow: 0 0 5px #72a1de84;
-}
+/* .hero-info .hero-info-title{
+    /* color: #72a1de;
+    padding: 8px 5px; */
+    /* border-radius: 50px;
+    border: 1px solid #72a1de94; */
+   
+    /* background-color: #2200493d; */
+    /* box-shadow: 0 0 5px #72a1de84; */
+
 
 .hero-info h1{
     font-size: 60px;
@@ -582,9 +587,12 @@ header ul a:hover{
 
 .skills-slider {
   display: flex;
-  gap: 2rem;
+  gap: 2 rem;
   animation: slideLeft 30s linear infinite;
+ 
+  
 }
+
 
 @keyframes slideLeft {
   0% {
@@ -665,6 +673,7 @@ header ul a:hover{
     max-width: 400px;
     margin-top: 30px;
     margin-bottom: 5px;
+  
 }
 .contact-box input{
 padding: 7.5px 30px;
@@ -1013,27 +1022,6 @@ footer h1{
     .autoBlur{
         animation: none;
     }
-/*     
-    .hero{
-        flex-direction: column;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right:0;
-        
-    }
-    .hero-info{
-        bottom: 5%;
-    }
-
-    .scroll-down{
-        bottom: 5%;
-    } */
-/* 
-    .hero .skills-video-box{
-        height: 200px;
-        top: 5%;
-    } */
 
 
 
@@ -1332,4 +1320,75 @@ footer h1{
   }
 }
 
+
+/* august 11 */
+
+
+
+
+
+.typewriter-gradient {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, orange, darkblue, deeppink, orange);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 7s ease infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+
+}
+
+/* .hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+} */
+/* 
+.gradient {
+  background: linear-gradient(45deg, orange, darkblue, deeppink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin: 20px 0 30px;
+  line-height: 1.6;
+} */
+
+/* .highlight {
+  color: orange;
+  font-weight: bold;
+} */
+ .highlight {
+  color: orange;
+  font-weight: bold;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, orange, deeppink, darkblue);
+  color: white;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+}
 

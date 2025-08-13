@@ -132,6 +132,10 @@ const navLinks = document.getElementById('nav-links');
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
+//august 11
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("open-sidebar");
+}
 
 
 
