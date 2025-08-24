@@ -785,52 +785,66 @@ footer h1{
 }
 
 /* Sidebar */
+/* Sidebar hidden by default */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;   /* hidden off screen */
+  width: 250px;
+  height: 100vh;
+  background:rgba(50, 50, 50, 0.8);
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+}
 
-.menu-icon{
-    font-size: 35px;
-    cursor: pointer;
+/* When active → slide in */
+.sidebar.active {
+  right: 0;
+  
+}
+
+.sidebar ul {
+  margin-top: 50px;
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+.sidebar ul li a:hover {
+  color: #0055cc;
+  /* color: #ffcc00;                    */
+}
+.close-icon {
+  font-size: 30px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;  /* hidden on desktop */
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  header .nav-links {
     display: none;
+  }
 }
 
 
-.sidebar{
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 70%;
-    width: 0%;
-    background-color: #000000b8;
-    z-index: 999;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.479);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    border-bottom-left-radius: 100%;
-    
-}
-
-.close-icon{
-    font-size: 50px;
-    color: lightgray;
-    padding-left: 10px;
-    cursor: pointer;
-}
-
-.sidebar ul{
-    padding-left: 20px;
-}
-
-.sidebar ul li{
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-.sidebar ul li a{
-    text-decoration: none;
-    color: lightgray;
-    font-size: 30px;
-    font-weight: 900;
-    text-shadow:0 0 15px #4c4c4c;
-}
 
 .social-sidebar{
     padding-left: 20px;
