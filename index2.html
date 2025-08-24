@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diksha's Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+</head>
+<body>
+  <div class="container">
+    <video class="back-vid" autoplay loop muted plays-inline src="main/videos/galaxy (1).mp4"></video>
+
+    <header data-aos="fade-down" data-aos-duration="2000">
+      <div class="left">
+        <img src="main/img/logo1.png" alt="logo" />
+        <h2 data-aos="fade-right" data-aos-duration="3000"><span class="gradient">Diksha Rai</span> </h2>
+      </div>
+    
+      
+<!-- ================================================Navbar================================================================= -->
+
+      <ul >
+        <li> <a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#qualification">Qualifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact </a></li>
+      </ul>
+
+      <div class="box-icons">
+          <a  id="instagram-link" href="#"><i class="bx bxl-instagram"></i></a>
+            <a id="github-link" href="https://github.com/Diksha1494"><i class="bx bxl-github"></i></a>
+            <a id="linkedin-link" href="https://www.linkedin.com/in/diksha-rai-a89731293/"><i class="bx bxl-linkedin-square"></i></a>
+            
+       </div>
+         <div class="menu-icon">
+        <i class="bx bx-menu"></i>
+      </div>
+       </header>
+         <div class="sidebar">
+      <div class="close-icon">
+        <i class="bx bx-x"></i>
+      </div>
+
+      
+      
+      <div class="social-sidebar">
+        <!-- <a><i class="bx bxl-youtube"></i></a>
+        <a><i class="bx bxl-github"></i></a>
+        <a><i class="bx bxl-linkedin-square"></i></a> -->
+      </div>
+    </div>
+<!-- ===================Hamburger=================== -->
+      <!--  <div class="menu-icon">
+        <i class="bx bx-menu"></i>
+      </div>
+    </header>
+
+    <div class="sidebar">
+      <div class="close-icon">
+        <i class="bx bx-x"></i>
+      </div>  -->
+       <!-- <ul >
+        <li> <a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#qualification">Qualifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact </a></li>
+      </ul>
+        <div class="sidebar">
+      <div class="close-icon">
+        <i class="bx bx-x"></i>
+      </div>
+      
+      <div class="social-sidebar">
+        
+      </div>
+    </div> -->
+
+   <!-- ==================================HomePage=========================================  -->
+  
+    <section class="hero">
+      <div class="hero-info autoBlur" data-aos="fade-right" data-aos-duration="1000">
+        <div class="hero-info-title">
+          
+          <h2 class="typewriter-gradient" id="typewriter"></h2>
+
+ <h2 class="typewriter-gradient" id="typewriter"></h2>
+
+
+
+<script>
+const phrases = ["Full Stack Developer", " Passionate Coder", "Java Developer"];
+let i = 0;
+let j = 0;
+let isDeleting = false;
+let pause = false;
+
+function loop() {
+  const display = document.getElementById("typewriter");
+  if (!display) return;
+
+  if (!pause) {
+    if (!isDeleting) {
+      j++;
+      display.textContent = phrases[i].substring(0, j);
+    } else {
+      j--;
+      display.textContent = phrases[i].substring(0, j);
+    }
+  }
+
+  // pause when full word is typed
+  if (!isDeleting && j === phrases[i].length) {
+    pause = true;
+    setTimeout(() => {
+      isDeleting = true;
+      pause = false;
+    }, 1000);
+  }
+
+  // pause before typing next word
+  if (isDeleting && j === 0) {
+    pause = true;
+    setTimeout(() => {
+      isDeleting = false;
+      i = (i + 1) % phrases.length;
+      pause = false;
+    }, 300);
+  }
+
+  // keep loop always running
+  requestAnimationFrame(() => setTimeout(loop, pause ? 50 : (isDeleting ? 80 : 100)));
+}
+
+loop();
+</script>
+
+
+        </div>
+        <h1 data-aos="fade-right" data-aos-duration="3000">Providing <span class="gradient">the best</span> Project <span class="gradient">Experience</span></h1>
+         <p >Turning ideas into seamless digital experiences.<br>
+        I’m  <span class="highlight">Diksha Rai</span> a passionate Full Stack Developer crafting clean, efficient, and scalable solutions.</p>
+                 <button class="cv-button"><a href="Resume_July_diksha.pdf" id="download-cv-btn" style="color: white">
+  <i class="bx bx-send"></i> Download My CV</a></button>
+      </div>
+      <div class="skills-video-box">
+        <video class="skills-video " autoplay loop muted plays-inline src="main/videos/hero-video.mp4"></video>
+      </div>
+        <div class="profile-pic-container ">
+  <img src="main/img/pic.jpg" alt="Profile Picture" class="profile-pic">
+</div>
+      <div class="scroll-down"></div>
+    </section>
+<!-- =================================================About==================================================================== -->
+    
+
+
+<section class="about section autoBlur" id="about">
+      <h2 class="section__title autoDisplay">About Me</h2>
+      <span class="section__subtitle">My introduction</span>
+
+      <div class="about__container container grid autoBlur">
+        <img src="main/img/pic.jpg" alt="" class="about__img" />
+
+        <div class="about__data autoBlur">
+          <p class="about__description autoBlur">
+            Hello there, I'm Diksha, an aspiring Full Stack Developer , seeking to apply skills like Spring BOOT, Rest API, Html, Css, JS ReactJS to build robust and user friendly applications. I've mastered various programming languages and technologies. I've solved 300+ DSA questions on LeetCode and GFG together . Seeking a competitive position to enhance my
+            skills and contribute to a professional organization. I'm very much passionate to learn new stuffs
+            that interests me and can help me to get better. <br>
+           When I’m not coding, you’ll often find me painting or singing, activities that fuel my creativity and help me bring fresh perspectives to my work.
+            
+          </p>
+          <div class="about__info autoBlur">
+            <div>
+              <span class="about__info-title" >9.2+</span>
+              <span class="about__info-name">Aggregate <br />GPA</span>
+            </div>
+            <div>
+              <span class="about__info-title">03+</span>
+              <span class="about__info-name">Frontend <br />
+                Projects</span>
+            </div>
+            <div>
+              <span class="about__info-title">02+</span>
+              <span class="about__info-name">Backend <br />Projects</span>
+            </div>
+          </div>
+
+          <div class="about__buttons autoBlur">
+            <!-- <a download="" href="assets\MyCV.pdf" class="button button--flex"> -->
+              <a href="#" class="button button_resume">Hire Me
+                <i class="uil uil-message button__icon"></i>
+              </a>
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- ===============================================SKILLS======================================================= -->
+
+<section id="skills" class="skills-section autoBlur">
+  <div class="section-header  autoDisplay">
+     <h1 class="section-header ">My Skills 💪</h1>
+      <div class="underline "></div>
+      <p>A showcase of my technical skills and expertise,<br>
+         refined through diverse projects and hands-on experience</p>
+    </div>
+
+  <div class="skills-slider ">
+    <!-- Use same structure, 21 skills -->
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React JS"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"></div>
+    <!-- <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS"></div> -->
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node JS"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express JS"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="NPM"></div>
+    <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"></div>
+  </div>
+</section>
+
+
+
+   
+
+      <!-- ---------------------------------------Qualification------------------------------------------------------------- -->
+      <!--==================== Qualifications ==================-->
+
+    <section class="qualification__section service__section autoBlur" id="qualification">
+      <h2 class="section__title autoDisplay">Qualification</h2>
+      <span class="section__subtitle ">My personal journey</span>
+
+      <div class="qualification__container container grid services__container autoBlur">
+        <div class="qualification__tabs">
+          <div class="qualification__button button--flex qualification__active autoBlur" data-target="#education">
+            <i class="uil uil-graduation-cap qualification__icon"></i>
+            Education
+          </div>
+        </div>
+
+        <div class="qualification__sections autoBlur">
+          <!--====== Qualification Content 1 ======-->
+          <div class="
+                qualification__content
+                qualifiation__active
+                services__content
+              " data-content id="education">
+            <!--====== Qualification 1 ======-->
+            <div class="qualification__data">
+              <div>
+                <h3 class="qualification__title">WBSE</h3>
+                <span class="qualification__subtitle">Nalanda<br> English Day High School</span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  - 2020
+                </div>
+                <span class="
+                      button button--flex button--small button--link
+                      services__button
+                    ">
+                  View More
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </span>
+                <div class="services__modal">
+                  <div class="services__modal-content">
+                    <h4 class="services__modal-title">Class 10th Summary :</h4>
+                    <i class="uil uil-times services__modal-close"></i>
+                    <ul class="services__modal-services grid">
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__moda-icon"></i>
+                        <p>
+                          Subjects were studied:  Maths, English,
+                          Hindi,History,Geography,Physical Science,Life Science.
+                        </p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__moda-icon"></i>
+                        <p>Scored 87% </p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__moda-icon"></i>
+                        <p>Won Many Dash Races(100m,200m, & 400m) </p>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <span class="qualification__rounder autoBlur"></span>
+                <span class="qualification__line"></span>
+              </div>
+            </div>
+
+            <!--====== Qualification 2 ======-->
+            <div class="qualification__data autoBlur">
+              <div></div>
+
+              <div>
+                <span class="qualification__rounder"></span>
+                <span class="qualification__line"></span>
+              </div>
+              <div>
+                <h3 class="qualification__title">Class 12th</h3>
+                <span class="qualification__subtitle">Balika Siksha Sadan</span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  - 2022
+                </div>
+                <span class="
+                      button button--flex button--small button--link
+                      services__button
+                    ">
+                  View More
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </span>
+                <div class="services__modal">
+                  <div class="services__modal-content">
+                    <h4 class="services__modal-title">Class 12th Summary :</h4>
+                    <i class="uil uil-times services__modal-close"></i>
+                    <ul class="services__modal-services grid">
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__moda-icon"></i>
+                        <p>
+                          Subjects were studied: Physics, Chemistry, Maths, Bio,
+                          English, Hindi.
+                        </p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__moda-icon"></i>
+                        <p>Scored 85 % </p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__moda-icon"></i>
+                       
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--====== Qualification 3 ======-->
+            <div class="qualification__data autoBlur">
+              <div>
+                <h3 class="qualification__title">College</h3>
+                <span class="qualification__subtitle">Institute of Engineering & Management, Kolkata</span>
+                <div class="qualification__calender">
+                  <i class="uil uil-calendar-alt"></i>
+                  2023- 2027
+                </div>
+                <span class="
+                      button button--flex button--small button--link
+                      services__button
+                    ">
+                  View More
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </span>
+                <div class="services__modal">
+                  <div class="services__modal-content">
+                    <h4 class="services__modal-title">College Summary :</h4>
+                    <i class="uil uil-times services__modal-close"></i>
+                    <ul class="services__modal-services grid">
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__modal-icon"></i>
+                        <p>
+                          Studying core subjects of IT including DSA, Embedded systems, Design analysis and algorithm,
+                          Operating
+                          systems, and Computer architecture .
+                        </p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__modal-icon"></i>
+                        <p>Scored an aggregate of 9.3 GPA  till now.</p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i class="uil uil-check-circle services__modal-icon"></i>
+                        <p>
+                          Organised Various Tech Fest, Cultutral Programme in college.
+                          Also Played in College Volleyball,Throwball Team.
+                        </p>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="qualification__rounder"></span>
+                <!--<span class="qualification__line"></span>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+
+<!-- =================================projects================================================== -->
+    <section id="projects" class="my-project">
+      <h1 class="section-title autoDisplay">My Projects 👨‍💻</h1>
+      <div class="project-card">
+        <div class="project-vidbox autoBlur">
+          <video loop id="projectVideo1" src="main/videos/books.mp4"></video>
+          <div class="hover-sign"></div>
+        </div>
+        <div class="project-info fadein-left">
+          <h1>Book <span class="gradient">Store</span> Application</h1>
+          <p>A responsive bookstore application built with MERN, featuring an Admin Panel for inventory and order management, along with AI-powered book recommendations to personalize user experience</p>
+          <button class="cv-button"><i class="bx bx-link-external"></i> Website</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-vidbox autoBlur">
+          <video loop id="projectVideo2" src=""></video>
+        </div>
+        <div class="project-info fadein-left">
+          <h1>Expense <span class="gradient">Management</span> System</h1>
+          <p>A secure full-stack expense tracker built with MERN, offering JWT authentication, personalized dashboards, CRUD operations, and visual analytics for financial insights.</p>
+          <button class="cv-button"><i class="bx bx-link-external"></i> Website</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-vidbox autoBlur">
+          <video loop id="projectVideo3" src=""></video>
+        </div>
+        <div class="project-info fadein-left">
+          <h1>E-Commerce <span class="gradient">Website</span></h1>
+          <p>A fully functional e-commerce platform with product browsing, real-time search, cart management, and a secure checkout flow."</p>
+          <button class="cv-button"><i class="bx bx-link-external"></i> Website</button>
+        </div>
+      </div>
+    </section></div>
+
+
+ 
+</div>
+
+<!-- ===========================================CONTACT========================================================== -->
+<div class="container">
+    <section id="contact"class="contact-section">
+        <h1 class="section-title autoDisplay">Let's Talk 🤙 </h1>
+        <div class="social-box">
+           <a href="#"><i class='bx bxs-phone-call'></i>+91 6290738063</a>
+           <a id="github-link"href="#"><i class="bx bxl-github"></i>Diksha1494</a>
+
+             <a id="linkedin-link"target="_blank" href="#"><i class="bx bxl-linkedin-square"></i>diksha-rai-a89731293</a>
+              <div class="social-icons">
+                          <a  id="instagram-link" href="#"><i class="bx bxl-instagram"></i></a>
+                  
+                    <a id="whatsapp-link" href="https://wa.me/6290738063" target="_blank">
+                                <i class="bx bxl-whatsapp"></i>
+                          </a>
+
+                   <a id="https://github.com/Diksha1494"  href="#"><i class="bx bxl-github"></i></a>
+      </div>
+        </div>
+           
+      <div class="contact-box">
+        <p>Whether you need a brand-new website, a refresh for your current platform, or a unique idea brought to life 
+          — I’m ready to make it happen.</p>
+             <p>Full Name</p>
+             <input type="text"placeholder=" Enter Your Full Name">
+              <p>Email Address</p>
+             <input type="text"placeholder=" Enter Your Email">
+              <p>Your Message</p>
+             <input class="input-messgae" type="text"placeholder=" Share your thoughts...">
+             <button class="cv-button"><i class="bx bx-send"></i>Send Messgae</button>
+      </div>
+    </section>
+
+    <section>
+      
+           <footer class="footer">
+    <div class="footer__bg">
+      <div class="footer__container container grid">
+        <div>
+          <!-- <h1 class="footer__title">Diksha</h1> -->
+          <span class="footer__subtitle">Computer Science and Engineering student<br>Specialization in IOTCSBT</span>
+        </div>
+        </footer>
+        </div>
+    <section>
+       
+        </div>
+    </section>
+  
+
+  <script src="app.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- =======================view more qualification======================================= -->
+   <script>
+  // Select all buttons and modals
+  const modalViews = document.querySelectorAll('.services__modal');
+  const modalBtns = document.querySelectorAll('.services__button');
+  const modalCloses = document.querySelectorAll('.services__modal-close');
+
+  // Function to open modal
+  let openModal = function(modalIndex) {
+    modalViews[modalIndex].classList.add('services__active');
+  };
+
+  // Show modal when clicking "View More"
+  modalBtns.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      openModal(i);
+    });
+  });
+
+  // Close modal when clicking the "x"
+  modalCloses.forEach((close) => {
+    close.addEventListener('click', () => {
+      modalViews.forEach((modal) => {
+        modal.classList.remove('services__active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
