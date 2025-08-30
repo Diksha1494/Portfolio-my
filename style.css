@@ -4,10 +4,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: lightgray;
      overflow-x: hidden;
+      /* outline: 1px solid red; debug */
 }
 
 html{
     scroll-behavior: smooth;
+    
 }
 
 .container{
@@ -380,7 +382,10 @@ header ul a:hover{
 
 
 .my-project{
+  
     display: flex;
+   
+
     flex-direction: column;
     gap: 10%;
     align-items: center;
@@ -398,6 +403,7 @@ header ul a:hover{
     align-items: center;
     gap: 10%;
     justify-content: center;
+    
 }
 
 .project-vidbox{
@@ -434,6 +440,7 @@ header ul a:hover{
     justify-content: center;
     width: 50%;
     padding-left: 10%;
+     
 }
 
 .project-info h1{
@@ -588,7 +595,7 @@ header ul a:hover{
 
 .skills-slider {
   display: flex;
-  gap: 2 rem;
+  gap: 2rem;
   animation: slideLeft 30s linear infinite;
  overflow: hidden;
   
@@ -623,6 +630,49 @@ header ul a:hover{
   .skill-item img {
     width: 40px;
     height: 40px;
+  }
+   .my-project {
+    height: auto;           /* allow content to grow */
+    margin-top: 100px;
+    margin-bottom: 200px;
+    gap: 40px;
+  }
+
+  .project-card {
+    flex-direction: column; /* stack video + info vertically */
+    height: auto;
+    gap: 20px;
+  }
+
+  .project-vidbox {
+    width: 100%;
+    min-width: unset;       /* remove 400px restriction */
+    height: auto;
+  }
+
+  .project-vidbox video {
+    width: 100%;
+    height: auto;
+    max-height: 250px;      /* scale video */
+  }
+
+  .project-info {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-info h1,
+  .project-info p {
+    max-width: 90%;
+    text-wrap: wrap;
+  }
+
+  .project-info button {
+    width: 100%;            /* full width for mobile */
+    max-width: 250px;
+    margin-top: 1rem;
   }
 }
 
@@ -858,7 +908,24 @@ footer h1{
     cursor: pointer;
     transition: 0.5s;
 }
+ .about__container {
+    column-gap: 5rem;
+  }
 
+  .about__img {
+    width: 300px;
+  }
+
+  .about__description {
+    text-align: initial;
+  }
+  .about__info {
+    justify-content: space-between;
+  }
+  .about__buttons {
+    justify-content: initial;
+  }
+  
 /* Sidebar Open ANimation */
 .sidebar.open-sidebar{
     animation: openSideBarAnimation 1.5s forwards;
@@ -894,8 +961,25 @@ footer h1{
     }
 }
 
+@media screen and (max-width: 350px) {
 
+  .qualification__data {
+    gap: 0.5rem;
+  }
 
+  .services__container {
+    justify-content: center;
+  }
+
+  .services__content {
+    padding-right: 0.5rem;
+  }
+
+  .services__modal {
+    padding: 0 0.5rem;
+  }
+
+}
 
 
 
