@@ -800,8 +800,8 @@ footer h1 {
 
 /* BLUR EFFECT ANIMAION */
 
-.autoBlur {
-  animation: autoBlurAnimation linear both;
+/* .autoBlur {
+  animation: autoBlurAnimation 15s linear both;
   animation-timeline: view();
 }
 @keyframes autoBlurAnimation {
@@ -817,7 +817,7 @@ footer h1 {
     filter: blur(40px);
     opacity: 0;
   }
-}
+} */
 
 /* AUTO DISPLAY ANIMAION */
 .autoDisplay {
