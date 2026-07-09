@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+
+  html {
+    background: #020617;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #020617;
+    color: #e8ecf5;
+    font-family: "Outfit", sans-serif;
+    overflow-x: clip;
+    cursor: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    cursor: none;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.28);
+    color: #f8fafc;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply relative mx-auto w-full max-w-6xl px-6 py-24 md:px-10 md:py-28;
+  }
+
+  .glass-panel {
+    @apply rounded-3xl border border-white/10 bg-white/[0.035] backdrop-blur-xl;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 24px 80px rgba(0, 0, 0, 0.24);
+  }
+
+  .text-shimmer {
+    background-image: linear-gradient(110deg, #e8ecf5 0%, #33d6ff 55%, #7cf2c3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero-action-primary {
+    @apply relative overflow-hidden border border-cyan-200/20 bg-[linear-gradient(90deg,rgba(103,232,249,1),rgba(56,189,248,1),rgba(217,70,239,0.92))] shadow-[0_12px_40px_rgba(14,165,233,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_50px_rgba(14,165,233,0.36)];
+  }
+
+  .hero-action-secondary {
+    @apply border border-white/10 bg-white/[0.04] transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-200/35 hover:bg-white/[0.08];
+  }
+
+  .timeline-card,
+  .achievement-card,
+  .certificate-card,
+  .skill-card {
+    box-shadow: 0 16px 40px rgba(2, 6, 23, 0.22);
+  }
+}
+
+@layer utilities {
+  .noise-overlay {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.2) 1px, transparent 0);
+    background-size: 20px 20px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.starfield {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.92) 0 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(125, 211, 252, 0.72) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(216, 180, 254, 0.58) 0 1px, transparent 1.5px);
+  background-position:
+    0 0,
+    48px 92px,
+    140px 30px;
+  background-size:
+    170px 170px,
+    230px 230px,
+    310px 310px;
+}
+
+.starfield-a {
+  animation: star-drift 70s linear infinite;
+}
+
+.starfield-b {
+  opacity: 0.6;
+  filter: blur(0.4px);
+  transform: scale(1.4);
+  animation: star-drift-reverse 110s linear infinite;
+}
+
+.nebula {
+  background:
+    radial-gradient(ellipse at 16% 32%, rgba(45, 200, 255, 0.16), transparent 34%),
+    radial-gradient(ellipse at 78% 18%, rgba(217, 70, 239, 0.13), transparent 32%),
+    radial-gradient(ellipse at 66% 76%, rgba(124, 242, 195, 0.1), transparent 34%);
+  filter: blur(18px) saturate(1.35);
+  animation: nebula-breathe 16s ease-in-out infinite;
+}
+
+.sun {
+  background:
+    radial-gradient(circle at 35% 32%, #ffffff 0 8%, #a5f3fc 22%, #22d3ee 45%, rgba(14, 165, 233, 0.18) 72%, transparent 100%);
+  box-shadow:
+    0 0 42px rgba(103, 232, 249, 0.62),
+    0 0 110px rgba(56, 189, 248, 0.38),
+    0 0 190px rgba(217, 70, 239, 0.18);
+  animation: sun-pulse 4.8s ease-in-out infinite;
+}
+
+.planet-orbit {
+  animation-name: orbit-spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.planet {
+  animation: planet-glow 5s ease-in-out infinite;
+}
+
+.neural-web {
+  background-image:
+    linear-gradient(65deg, transparent 0 22%, rgba(103, 232, 249, 0.1) 22.2%, transparent 22.7% 100%),
+    linear-gradient(118deg, transparent 0 38%, rgba(217, 70, 239, 0.08) 38.2%, transparent 38.7% 100%),
+    linear-gradient(154deg, transparent 0 54%, rgba(125, 211, 252, 0.08) 54.2%, transparent 54.7% 100%);
+  background-size: 360px 260px;
+  animation: neural-slide 32s linear infinite;
+}
+
+.neural-node {
+  animation: node-pulse 3.6s ease-in-out infinite;
+}
+
+.shooting-star {
+  height: 2px;
+  width: 180px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), rgba(103, 232, 249, 0.12));
+  filter: drop-shadow(0 0 12px rgba(103, 232, 249, 0.72));
+  opacity: 0;
+  transform: rotate(-18deg);
+}
+
+.shooting-star-one {
+  left: 72%;
+  top: 16%;
+  animation: shooting-star 8s ease-in-out infinite;
+}
+
+.shooting-star-two {
+  left: 26%;
+  top: 48%;
+  animation: shooting-star 11s ease-in-out 3.5s infinite;
+}
+
+.project-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 85%);
+}
+
+.project-bar {
+  transform-origin: bottom;
+  animation: data-rise 2.8s ease-in-out infinite;
+}
+
+.education-card {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 28px 90px rgba(0, 0, 0, 0.28);
+}
+
+.education-shell {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.education-orb {
+  box-shadow: 0 0 18px currentColor;
+  animation: education-float 3.8s ease-in-out infinite;
+}
+
+@keyframes star-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-170px, 170px, 0);
+  }
+}
+
+@keyframes star-drift-reverse {
+  from {
+    transform: scale(1.4) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.4) translate3d(230px, -230px, 0);
+  }
+}
+
+@keyframes nebula-breathe {
+  0%,
+  100% {
+    opacity: 0.62;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.96;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes sun-pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes planet-glow {
+  0%,
+  100% {
+    filter: brightness(0.95);
+  }
+  50% {
+    filter: brightness(1.25);
+  }
+}
+
+@keyframes neural-slide {
+  to {
+    background-position: 360px 260px;
+  }
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes shooting-star {
+  0%,
+  68% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(-18deg);
+  }
+  72% {
+    opacity: 1;
+  }
+  82%,
+  100% {
+    opacity: 0;
+    transform: translate3d(-440px, 150px, 0) rotate(-18deg);
+  }
+}
+
+@keyframes data-rise {
+  0%,
+  100% {
+    transform: scaleY(0.72);
+    opacity: 0.68;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes education-float {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(8px, -12px, 0) scale(1.2);
+  }
+}
+
+@keyframes blob-one {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(22px, -24px) scale(1.12);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes blob-two {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-18px, 20px) scale(0.94);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.blob-one {
+  animation: blob-one 9s ease-in-out infinite;
+}
+
+.blob-two {
+  animation: blob-two 11s ease-in-out infinite;
+}
+
+@keyframes ambient-orb {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.28;
+  }
+  50% {
+    transform: translate3d(18px, -28px, 0) scale(1.08);
+    opacity: 0.42;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.28;
+  }
+}
+
+.ambient-orb {
+  animation-name: ambient-orb;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #33d6ff, #7cf2c3);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101217;
+}
+
+@media (max-width: 767px) {
+  body,
+  a,
+  button,
+  input,
+  textarea {
+    cursor: auto;
+  }
+
+  .section-shell {
+    padding-top: 5.75rem;
+    padding-bottom: 5.75rem;
+  }
+
+  .education-shell {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
